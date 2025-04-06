@@ -9,17 +9,15 @@ public class Salario {
         double salario;
         char sexo;
         char estadoCivil;
-
-        // Validação do nome
+        
         do {
             System.out.print("Digite seu nome (mais de 3 caracteres): ");
             nome = scanner.nextLine();
             if (nome.length() <= 3) {
                 System.out.println("Nome inválido. Deve ter mais de 3 caracteres.");
             }
-        } while (nome.length() <= 3);
-
-        // Validação da idade
+        } while (nome.length() <= 3
+                 
         do {
             System.out.print("Digite sua idade (entre 0 e 150): ");
             idade = scanner.nextInt();
@@ -27,8 +25,7 @@ public class Salario {
                 System.out.println("Idade inválida. Deve estar entre 0 e 150.");
             }
         } while (idade < 0 || idade > 150);
-
-        // Validação do salário
+        
         do {
             System.out.print("Digite seu salário (maior que 0): ");
             salario = scanner.nextDouble();
@@ -37,10 +34,8 @@ public class Salario {
             }
         } while (salario <= 0);
 
-        // Limpa o buffer do scanner antes de ler char
         scanner.nextLine();
-
-        // Validação do sexo
+        
         do {
             System.out.print("Digite seu sexo ('f' para feminino ou 'm' para masculino): ");
             sexo = scanner.nextLine().toLowerCase().charAt(0);
@@ -49,7 +44,6 @@ public class Salario {
             }
         } while (sexo != 'f' && sexo != 'm');
 
-        // Validação do estado civil
         do {
             System.out.print("Digite seu estado civil ('s' - solteiro, 'c' - casado, 'v' - viúvo, 'd' - divorciado): ");
             estadoCivil = scanner.nextLine().toLowerCase().charAt(0);
@@ -58,7 +52,6 @@ public class Salario {
             }
         } while (estadoCivil != 's' && estadoCivil != 'c' && estadoCivil != 'v' && estadoCivil != 'd');
 
-        // Exibindo os dados validados
         System.out.println("\nInformações validadas com sucesso:");
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
